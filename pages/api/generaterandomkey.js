@@ -1,7 +1,7 @@
 export default async function generaterandomkey(req, res) {
   try {
     console.log(req.headers.host);
-    if (req.headers.host === "http://127.0.0.1:5501") {
+    if (req.headers.host === "traek.vercel.app") {
       console.log("inside IF");
       res.setHeader("Access-Control-Allow-Origin", req.headers.host);
       res.contentType = "application/json";
