@@ -3,7 +3,7 @@ export default async function generaterandomkey(req, res) {
     console.log(req.headers.host);
     if (req.headers.host) {
       console.log("inside IF");
-      res.setHeader("Access-Control-Allow-Origin", req.headers.host);
+      res.setHeader("Access-Control-Allow-Origin", "*");
       res.contentType = "application/json";
     }
     res.status(200).json({ msg: req.headers.host });
